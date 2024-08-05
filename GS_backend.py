@@ -195,16 +195,8 @@ def scrape_linkedin_profiles(search_query, num_profiles):
     #driver = webdriver.Chrome(service=Service())
     #driver.maximize_window()
     # Automatically install ChromeDriver
-    chromedriver_autoinstaller.install()
-    
-    # Set up Chrome options
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--disable-dev-shm-usage')
-    
-    # Initialize the WebDriver
-    driver = webdriver.Chrome(options=chrome_options)
+    chrome_version = "127.0.6533.89"  # Specify the version you want
+    driver = webdriver.Chrome(executable_path=ChromeDriverManager(version=chrome_version).install())
         
             
 
