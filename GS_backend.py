@@ -17,8 +17,9 @@ from nltk.tokenize import word_tokenize
 import nltk
 from nltk.corpus import stopwords
 
-# Append the local nltk_data directory to the nltk data path
-nltk.data.path.append('./stopwords')  # Adjust the path based on your project structure
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
 stop_words = set(stopwords.words('english'))
 
 # Rest of your backend code
