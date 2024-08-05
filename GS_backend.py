@@ -192,12 +192,10 @@ def scrape_linkedin_profiles(search_query, num_profiles):
     #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    #driver = webdriver.Chrome(service=Service())
-    #driver.maximize_window()
+    driver = webdriver.Chrome(service=Service())
+    driver.maximize_window()
     # Automatically install ChromeDriver
-    chrome_version = "127.0.6533.89"  # Specify the version you want
-    driver = webdriver.Chrome(executable_path=ChromeDriverManager(version=chrome_version).install())
-        
+    
             
 
     def user_login():
