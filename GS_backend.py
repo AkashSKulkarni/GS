@@ -186,7 +186,8 @@ def data_scraping(profile_urls, keywords, driver):
     return dataset
 
 def scrape_linkedin_profiles(search_query, num_profiles):
-    driver = webdriver.Chrome(service=Service())
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    #driver = webdriver.Chrome(service=Service())
     driver.maximize_window()
 
     def user_login():
