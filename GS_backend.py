@@ -186,13 +186,24 @@ def data_scraping(profile_urls, keywords, driver):
     return dataset
 
 def scrape_linkedin_profiles(search_query, num_profiles):
-    options = webdriver.ChromeOptions()
+    #options = webdriver.ChromeOptions()
     #driver = webdriver.Chrome(service=Service(), options=options)
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     #driver = webdriver.Chrome(service=Service())
-    driver.maximize_window()
+    #driver.maximize_window()
+    def web_driver():
+            options = webdriver.ChromeOptions()
+            options.add_argument("--verbose")
+            options.add_argument('--no-sandbox')
+            options.add_argument('--headless')
+            options.add_argument('--disable-gpu')
+            options.add_argument("--window-size=1920, 1200")
+            options.add_argument('--disable-dev-shm-usage')
+            driver = webdriver.Chrome(options=options)
+            return driver
+        browser = web_driver()
 
     def user_login():
         nonlocal driver
