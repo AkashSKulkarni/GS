@@ -29,8 +29,8 @@ stop_words = set(stopwords.words('english'))
 
 
 # Add your LinkedIn and Instahyre credentials here
-LINKEDIN_USERNAME = ''
-LINKEDIN_PASSWORD = ''
+LINKEDIN_USERNAME = 'akash.s.kulkrni@gmail.com'
+LINKEDIN_PASSWORD = '1!2@3#4$abcd'
 
 # Set up API key for generative AI
 api_list = ["AIzaSyA51WTz0t69sBFs8D2ZmLLypKs6X9rIcEI", "AIzaSyDlCk6V9XXwHEYJSjSC4-g28N69UgNcVYA"]  # Replace with your API keys
@@ -191,8 +191,9 @@ def scrape_linkedin_profiles(search_query, num_profiles):
     #driver = webdriver.Chrome(service=Service(), options=options)
     #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-    #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    driver = webdriver.Chrome(service=Service())
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+    
+    #driver = webdriver.Chrome(service=Service())
     driver.maximize_window()
     # Automatically install ChromeDriver
     
