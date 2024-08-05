@@ -14,7 +14,17 @@ import random
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
+import nltk
+from nltk.corpus import stopwords
+
+# Append the local nltk_data directory to the nltk data path
+nltk.data.path.append('./stopwords')  # Adjust the path based on your project structure
 stop_words = set(stopwords.words('english'))
+
+# Rest of your backend code
+
+
+
 
 # Add your LinkedIn and Instahyre credentials here
 LINKEDIN_USERNAME = 'akash.s.kulkrni@gmail.com'
