@@ -14,6 +14,7 @@ import random
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import chromedriver_autoinstaller
+from webdriver_manager.core.os_manager import ChromeType
 
 import nltk
 from nltk.corpus import stopwords
@@ -190,8 +191,9 @@ def scrape_linkedin_profiles(search_query, num_profiles):
     #options = webdriver.ChromeOptions()
     #driver = webdriver.Chrome(service=Service(), options=options)
     #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    driver = webdriver.Chrome(ChromeDriverManager().install())
-    #driver = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+    #driver = webdriver.Chrome(ChromeDriverManager().install())
+    options = Options()
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),options=options)
     #driver = webdriver.Chrome(ChromeDriverManager(version='2.41').install())
     #driver = webdriver.Chrome(service=Service())
     driver.maximize_window()
