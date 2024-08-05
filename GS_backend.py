@@ -14,7 +14,7 @@ import random
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import chromedriver_autoinstaller
-
+from selenium.webdriver.chrome.service import Service as ChromeService, ChromeType
 import nltk
 from nltk.corpus import stopwords
 
