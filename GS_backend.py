@@ -30,8 +30,8 @@ stop_words = set(stopwords.words('english'))
 
 
 # Add your LinkedIn and Instahyre credentials here
-LINKEDIN_USERNAME = 'akash.s.kulkrni@gmail.com'
-LINKEDIN_PASSWORD = '1!2@3#4$abcd'
+LINKEDIN_USERNAME = ''
+LINKEDIN_PASSWORD = ''
 
 # Set up API key for generative AI
 api_list = ["AIzaSyA51WTz0t69sBFs8D2ZmLLypKs6X9rIcEI", "AIzaSyDlCk6V9XXwHEYJSjSC4-g28N69UgNcVYA"]  # Replace with your API keys
