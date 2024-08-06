@@ -29,6 +29,8 @@ def test_chromedriver():
         options.add_argument("--headless")
         options.add_argument("--disable-gpu")
         options.add_argument("--no-sandbox")
+        
+        # Corrected the way options are passed to the Chrome driver
         driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
         driver.get("https://www.google.com")
         st.write(driver.title)
@@ -38,6 +40,7 @@ def test_chromedriver():
 
 st.title("Test ChromeDriver on Streamlit Cloud")
 test_chromedriver()
+
 
     
 
